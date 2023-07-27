@@ -51,14 +51,14 @@ function init() {
 
 function renderLogo({ text, textColor, shape, shapeColor }) {
     let logo = null
-    switch (shape) {
-        case 'Circle':
+    switch (shape.toLowerCase()) {
+        case 'circle':
             logo = new Circle(shapeColor, textColor, text)
             break;
-        case 'Square':
+        case 'square':
             logo = new Square(shapeColor, textColor, text)
             break;
-        case 'Triangle':
+        case 'triangle':
             logo = new Triangle(shapeColor, textColor, text)
             break;
     }
