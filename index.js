@@ -36,7 +36,7 @@ const questions = [
 ];
 
 function init() {
-    inq.prompt(questions).then((answers) => {
+    inquirer.prompt(questions).then((answers) => {
         const logo = renderLogo(answers);
         fs.writeFile('./examples/logo.svg', generateSVG(logo), err => {
             if (err) {
